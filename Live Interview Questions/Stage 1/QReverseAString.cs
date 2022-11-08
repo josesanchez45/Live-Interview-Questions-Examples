@@ -16,7 +16,16 @@ namespace Live_Interview_Questions
          */
         public string ReverseString(string str)
         {
-            throw new NotImplementedException(); //your code here        
+            if (str == null || str.Length == 0)
+            {
+                return "";
+            }
+            string str2 = new string(str.Reverse().ToArray());
+
+            return str2;
+
+
+
         }
     }
 }

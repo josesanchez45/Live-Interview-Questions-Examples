@@ -16,7 +16,10 @@ namespace Live_Interview_Questions
          */
         public bool PalindromeCheck(string str)
         {
-            throw new NotImplementedException(); //your code here        
+            var check = str.Reverse();
+            if (str.SequenceEqual(check))
+            { return true; }
+            else return false;
         }
     }
 }

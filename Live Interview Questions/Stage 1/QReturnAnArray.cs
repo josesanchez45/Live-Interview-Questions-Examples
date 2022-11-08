@@ -11,13 +11,15 @@ namespace Live_Interview_Questions
         // RETURN AN EMPTY ARRAY OF STRINGS
         public string[] ReturnEmptyStringArray()
         {
-            throw new NotImplementedException();
+            string[] array = new string[0];
+            return array;
         }
 
         // RETURN AN EMPTY ARRAY OF INTEGERS 
         public int[] ReturnEmptyIntArray()
         {
-            throw new NotImplementedException();
+            int[] array = new int[0];
+            return array ;
         }
 
         // RETURN AN ARRAY OF INTEGERS FROM 1 TO N
@@ -25,7 +27,16 @@ namespace Live_Interview_Questions
         // n = 3 would return int[] { 1, 2, 3 }.
         public int[] ReturnIntArrayFrom1ToN(int n)
         {
-            throw new NotImplementedException();
+            int x = 0;
+            List<int> numlist = new List<int>();
+            while (x < n)
+            {
+                x++;
+                numlist.Add(x);
+            }
+            return numlist.ToArray();
+            
+
         }
     }
 }

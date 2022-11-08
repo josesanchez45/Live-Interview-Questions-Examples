@@ -16,7 +16,12 @@ namespace Live_Interview_Questions
          */
         public string WordsIntoSentence(string[] arr)
         {
-            throw new NotImplementedException();
+            if (arr == null || arr.Length == 0)
+            {
+                return string.Empty;
+            }
+            var result = string.Join(" ", arr);
+            return result;
         }
     }
 }

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.Design;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -16,7 +17,20 @@ namespace Live_Interview_Questions
          */
         public bool TwoDifferentElementsInArrayCanSumToTargetNumber(int[] arr, int target)
         {
-            throw new NotImplementedException();
+            var result = false;
+
+            for (int i = 0; i < arr.Length - 1; i++)
+            {
+                for (int j = 1; j < arr.Length - 1; j++)
+                {
+                    if(arr[i] + arr[j] == target || arr[i] + arr [j+1] == target)
+                    {
+                        result = true;
+                    }
+                }
+            }
+            return result;
+            
         }
     }
 }

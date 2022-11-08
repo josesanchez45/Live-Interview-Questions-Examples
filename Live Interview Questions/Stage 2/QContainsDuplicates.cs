@@ -18,7 +18,13 @@ namespace Live_Interview_Questions
         */
         public bool DuplicatesCheck(string str)
         {
-            throw new NotImplementedException(); //your code here
+            var set = new HashSet<char>();
+            for(int i = 0; i < str.Length; i++)
+            {
+                if (!set.Add(str[i])) { return true; }   
+
+            }
+           return false;
         }
     }
 }

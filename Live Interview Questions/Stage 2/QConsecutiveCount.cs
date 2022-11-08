@@ -1,7 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Reflection;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 
 namespace Live_Interview_Questions
@@ -17,7 +19,35 @@ namespace Live_Interview_Questions
     {
         public int HighestConsecutiveCount(int[] arr)
         {
-            throw new NotImplementedException(); //your code here
+            if (arr == null || arr.Length == 0)
+            {
+                return 0;
+            }
+            var currentNumber = arr[0];
+            var count = 0;
+            var highestCount = 0;
+            foreach (var num in arr)
+            {
+                if (num == currentNumber)
+                {
+                    count++;
+                    if (count > highestCount)
+                    {
+                        highestCount = count;
+                    }
+                }
+                else
+                {
+                    if (count > highestCount)
+                    {
+                        highestCount = count;
+                    }
+                    currentNumber = num;
+                    count = 1;
+                }
+            }
+            return highestCount;
+
         }
     }
 }

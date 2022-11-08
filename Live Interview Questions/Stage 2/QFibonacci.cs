@@ -16,7 +16,16 @@ namespace Live_Interview_Questions
          */
         public int FibonacciNumber(int n)
         {
-            throw new NotImplementedException();
+            if (n <= 0)
+            {
+                return 0;
+            }
+            var list = new List<int>() { 0, 1 };
+            for (int i = 2; i < n; i++)
+            {
+                list.Add(list[i - 2] + list[i - 1]);
+            }
+            return list[n - 1];
         }
     }
 }
