@@ -21,9 +21,9 @@ namespace Live_Interview_Questions
 
             for (int i = 0; i < arr.Length - 1; i++)
             {
-                for (int j = 1; j < arr.Length - 1; j++)
+                for (int j = i+1; j < arr.Length; j++)
                 {
-                    if(arr[i] + arr[j] == target || arr[i] + arr [j+1] == target)
+                    if(arr[i] + arr[j] == target)
                     {
                         result = true;
                     }
